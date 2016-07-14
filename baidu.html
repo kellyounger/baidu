@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>百度一下,你就知道</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style type="text/css">
+			a.on{
+				background: #def;
+			}
+		</style>
+		<script type="text/javascript">
+//			var setLi=document.getElementsByClassName("setLi")[0];
+//			var setCon=document.getElementById("setCon");
+//			function show(){
+//				setLi.onmouseover=function(){
+//				setCon.style.display="block";
+//				}
+//			}
+//			
+		</script>
+		<script>
+			window.onload=function(){
+				var aA=document.getElementsByTagName("a");
+				for (var i=0; i<aA.length;i++){
+					aA.index=i;
+					aA[i].onmouseover=function(){
+						this.className="on";
+						for(var i=0; i<aA.length;i++){
+							aA[this.index].className="";
+						}
+					}
+					aA[i].onmouseout=function(){
+						this.className="";
+						for(var i=0; i<aA.length;i++){
+							aA[this.index].className="on";
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		 <div id="head">
+        <a href="#">注册</a>
+        <a id="login" href="#">登陆</a>
+        <a href="#">搜索设置|</a>
+    </div>
+    <div id="mid">
+        <div id="image">
+            <img id="logo" src="image/logo.gif">
+        </div>
+        <div id="firstRow">
+            <a href="#" class="on">新&nbsp;闻</a>
+            <a id="web" href="#">网&nbsp;页</a>
+            <a href="#">贴&nbsp;吧</a>
+            <a href="#">知&nbsp;道</a>
+            <a href="#">音&nbsp;乐</a>
+            <a href="#">图&nbsp;片</a>
+            <a href="#">视&nbsp;频</a>
+            <a href="#">地&nbsp;图</a>
+        </div>
+        <div id="secondRow">
+            <form>
+                <input id="txt" type="text" name="txtValue"/>
+                <input id="btn" type="button" value="百度一下"/>
+            </form>
+        </div>
+        <div id="thirdRow">
+            <a href="#">百科</a>
+            <a href="#">文库</a>
+            <a href="#">hao123|</a>
+            <a href="#">更多>>></a>
+        </div>
+    </div>
+    <div id="foot">
+        <div id="fourthRow">
+            <a href="#">把百度设为首页</a>
+        </div>
+        <div id="fifthRow">
+            <a href="#">加入百度推广</a>|
+            <a href="#">搜索风云榜</a>|
+            <a href="#">关于百度</a>|
+            <a href="#">About Baidu</a>
+        </div>
+        <div id="sixthRow">
+            @2014&nbsp;Baidu<a href="#">使用前必读</a>京ICP认证030173号
+        </div>
+	</body>
+</html>

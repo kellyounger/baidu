@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>百度一下</title>
+		<link rel="stylesheet" type="text/css" href="css/mbaidu.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script src="js/mbaidu.js"></script>
+	</head>
+	<body>
+		<div id="indexPage">
+			<div id="indexPageP">
+				<div id="weather">
+					<div id="weatherOutline">
+						<i class="fa fa-sun-o"></i>
+						<div class="weatherNum">27°</div>
+						<div class="weatherStatus">
+							<p></p>
+							<p>空气&nbsp;22</p>
+						</div>
+						<i class="fa fa-angle-down"></i>
+					</div>
+					<div class="weatherDetail" data-height="248">
+						<div class="weatherDetailStatus">
+							<div class="weatherDetailGps">
+								<span>
+									<i class="iconfont icon-dingwei"></i>
+								</span>
+								<span></span>
+								<span><i class="fa fa-angle-up fa-2x"></i></span>
+							</div>
+							<div class="weatherDetailTemperature">
+								<p>31°</p>
+								<p class="iconfont icon-duoyun"></p>
+								<span>
+									晴&nbsp;微风&lt;2级
+								</span>
+							</div>
+							<div class="weatherDdetailSky">
+								<p>低温:22°</p>
+							</div>
+							<div id="weatherQulity">
+								<p>空气质量&nbsp;:&nbsp;27</p>
+								<a href="#">查看更多</a>
+							</div>
+						</div>
+						<div id="weatherForecast">
+							<div>
+								<p>明天</p>
+								<p class="iconfont">&#xe6a3;</p>
+								<p>29°/22°</p>
+							</div>
+							<div>
+					            <p>周四</p>
+					            <p class="iconfont">&#xe672;</p>
+					            <p>32°/23°</p>
+					        </div>
+					        <div>
+					            <p>周五</p>
+					            <p class="iconfont">&#xe607;</p>
+					            <p>28°/22°</p>
+					        </div>
+					        <div>
+					            <p>周六</p>
+					            <p class="iconfont">&#xe629;</p>
+					            <p>31°/23°</p>
+					        </div>
+						</div>
+					</div>
+				</div>
+				<div id="header">
+					<div class="userInfoWrap">
+						<a href="javascript:void(0)" id="login" class="iconfont icon-yonghu"></a>
+						<a href="javascript:void(0)" id="skin" class="iconfont icon-genghuanpifu"></a>
+					</div>
+					<div id="logo">
+						<img src="img/plus_logo.png"/ width="175" height="55" alt="百度 一下 ，你就 知道">
+					</div>
+					<form action="" method="get" autocomplete="off" id="indexPageForm">
+						<div id="formConWrap">
+							<input type="text" autocomplete="off" autocorrect="off" maxlength="64" id="index-kw" name="word" class="se-input adjust-input" data-sug="1">
+							<div class="serInner">
+								<div class="cross" id="indexCross"></div>
+								<div id="callIconWrap">
+									
+								</div>
+								<button type="submit" id="indexBtn" class="serBtn">百度一下</button>
+							</div>
+						</div>
+						
+					</form>
+					<div id="navs">
+						<div>
+							<a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a>
+							<a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a><a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a>
+							<a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a>
+							<a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a>
+							<a href="#">
+								<i class="iconfont icon-iconfont40" onclick="more()"></i>
+								更多
+							</a>
+						</div>
+						<div>
+							<a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a>
+							<a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a><a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a>
+							<a href="#">
+								<i class="iconfont icon-xinwenzhongxin"></i>
+								新闻
+							</a>
+							<a href="#">
+								<i class="iconfont"></i>
+							</a>
+							<a href="#">
+								<i class="iconfont"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="plusCard">
+					<div class="plusItem" id="nav">
+						<div class="plusTitle">
+							<div class="normalTitle">
+								<h2>我的导航</h2>
+								<a href="javascript:void(0)">
+									<i class="iconfont icon-gengduo" onclick="editTitle()"></i>
+									<ul class="pop">
+										<li>编辑</li>
+										<li>置顶</li>
+										<li>关闭</li>
+									</ul>
+								</a>
+							</div>
+							<div class="editTitle">
+								<h2>导航编辑</h2>
+								<a href="javascript:void(0)"><i class="fa fa-reply"></i></a>
+							</div>
+						</div>
+						<div class="plusCon">
+							<div class="">
+								<a href="#">资讯<i class="fa fa-times-circle"></i></a>
+								<a href="#">hao123<i class="fa fa-times-circle"></i></a>
+								<a href="#">图片<i class="fa fa-times-circle"></i></a>
+								<a href="#">爱奇艺<i class="fa fa-times-circle"></i></a>
+							</div>
+							<div class="">
+								<a href="#">美女<i class="fa fa-times-circle"></i></a>
+								<a href="#">音乐<i class="fa fa-times-circle"></i></a>
+								<a href="#">笑话<i class="fa fa-times-circle"></i></a>
+								<a href="#" class="iconfont icon-jia-copy"></a>
+							</div>
+						</div>
+					</div>
+					<div id="timeHot" class="plusItem hot">
+						<div class="plusTitle">
+							<div class="normalTitle">
+								<h2>实时热点</h2>
+								<a href="javascript:void(0)">
+									<i class="iconfont icon-gengduo" onclick="editTitle()"></i>
+									<ul class="pop">
+										<li>编辑</li>
+										<li>置顶</li>
+										<li>关闭</li>
+									</ul>
+								</a>
+								<span id="changeAnother">
+									<i class="iconfont icon-shuaxin"></i>换一批
+								</span>
+							</div>
+							<div class="editTitle">
+								<h2>导航编辑</h2>
+								<a href="javascript:void(0)"><i class="fa fa-reply"></i></a>
+							</div>
+						</div>
+						<div class="plusCon" id="timeHotC">
+							<p><a href="#"></a></p>
+							<p><a href="#"></a></p>
+							<p><a href="#"></a></p>
+							<p><a href="#"></a></p>
+							<p><a href="#"></a></p>
+							<p><a href="#"></a></p>
+						</div>
+						<div id="hotSearch">
+							<a href="#">百度风云榜&nbsp;
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+					<div id="bdReconmend" class="plusItem">
+						<div class="plusTitle">
+							<div class="normalTitle">
+								<h2>百度推荐</h2>
+								<a href="javascript:void(0)">
+									<i class="iconfont icon-gengduo" onclick="editTitle()"></i>
+									<ul class="pop">
+										<li>编辑</li>
+										<li>置顶</li>
+										<li>关闭</li>
+									</ul>
+								</a>
+								<span id="changeAnother">
+									<i class="iconfont icon-shuaxin"></i>换一批
+								</span>
+							</div>
+							<div class="editTitle">
+								<h2>导航编辑</h2>
+								<a href="javascript:void(0)"><i class="fa fa-reply"></i></a>
+							</div>
+						</div>
+						<div class="plusCon">
+							<ul id="newsContent">
+								<li>
+									<a href="#">
+										<img src="img/u=1900343055,764804896&fm=80.jpg"/>
+										<p>	民政部副部长率工作组赴江苏盐城指导开展救灾工作</p>
+										<span>17.26</span>
+									</a>
+								</li>
+								<li>
+									<a href="#"><p>权威发布：北京警方邀请雷阳死亡案件有关律师听取意见</p>
+									<span>18:35</span></a>
+								</li>
+								<li>
+									<a href="#">
+										<p>权威发布：北京警方邀请雷阳死亡案件有关律师听取意见</p>
+										<span>18:35</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p>权威发布：北京警方邀请雷阳死亡案件有关律师听取意见</p>
+										<span>18:35</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div id="seeMore">
+							<a href="#">查看更多推荐&nbsp;
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+					<div id="lifeService" class="plusItem">
+						<div class="plusTitle">
+							<div class="normalTitle">
+								<h2>生活服务</h2>
+								<a href="javascript:void(0)">
+									<i class="iconfont icon-gengduo" onclick="editTitle()"></i>
+									<ul class="pop">
+										<li>编辑</li>
+										<li>置顶</li>
+										<li>关闭</li>
+									</ul>
+								</a>
+							</div>
+							<div class="editTitle">
+								<h2>导航编辑</h2>
+								<a href="javascript:void(0)"><i class="fa fa-reply"></i></a>
+							</div>
+						</div>
+						<div class="plusTitle">
+							<div id="GpsYou" class="normalTitle">
+								<p>点击 定位 ,查看附近位置信息</p>
+								<a id="">
+									<i class="iconfont icon-dingwei"></i>定位
+								</a>
+							</div>
+						</div>
+						<div class="plusCon">
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+							<a href="#">
+								<i class="iconfont icon-meishi1"></i><br />
+								电影
+							</a>
+						</div>
+						<div class="toggle" onclick="toggle()">
+							<span>
+								<span>展示全部</span>
+								<i class="fa fa-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
